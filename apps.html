@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Discover Deenify's innovative mobile apps islam99 and streakly for Islamic lifestyle and spiritual growth">
+  <meta name="keywords" content="Islamic apps,Islam99, Streakly,download Islam99, download Streakly, Quran, Hadith, prayer tracker, Muslim apps, Deenify">
+  <meta name="author" content="Deenify">
+  <meta property="og:title" content="Our Apps — Deenify">
+  <meta property="og:description" content="Transform your spiritual practice with our Islamic mobile applications">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b6b3a">
+  <title>Our Apps — Deenify</title>
+  
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+  
+  <!-- Font Awesome with integrity check -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
+  <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
+  
+  <style>
+    :root {
+      --bg: #fbfcfb;
+      --card: #ffffff;
+      --accent: #0b6b3a;
+      --accent-light: rgba(11, 107, 58, 0.1);
+      --accent-dark: #08502d;
+      --muted: #6b6b6b;
+      --gold: #c89a3a;
+      --gold-light: rgba(200, 154, 58, 0.1);
+      --shadow: 0 6px 18px rgba(11, 107, 58, 0.06);
+      --shadow-hover: 0 12px 24px rgba(11, 107, 58, 0.12);
+      --radius: 12px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --max-width: 1200px;
+      --border-color: rgba(0, 0, 0, 0.08);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: #111;
+      font-family: var(--font-family);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: var(--accent);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 1000;
+    }
+
+    .skip-link:focus {
+      top: 6px;
+    }
+
+    /* Header & Navigation */
+    .site-header {
+      background: linear-gradient(90deg, var(--accent-light), rgba(200, 154, 58, 0.03));
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-family: 'Amiri', serif;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .brand:hover {
+      transform: scale(1.05);
+    }
+
+    .brand i {
+      font-size: 1.4rem;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+
+    .main-nav li {
+      margin-left: 4px;
+    }
+
+    .main-nav a {
+      display: block;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: var(--transition);
+      position: relative;
+      font-weight: 500;
+    }
+
+    .main-nav a:hover, 
+    .main-nav a:focus,
+    .main-nav a.active {
+      color: var(--accent);
+      background: var(--accent-light);
+      outline: none;
+    }
+
+    .main-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 12px;
+      right: 12px;
+      height: 2px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+
+    .mobile-nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--accent);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+
+    .mobile-nav-toggle:hover,
+    .mobile-nav-toggle:focus {
+      background: var(--accent-light);
+      outline: none;
+    }
+
+    /* Mobile Navigation Overlay */
+    .mobile-nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .mobile-nav-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav {
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .mobile-nav .main-nav {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mobile-nav .main-nav li {
+      margin: 0;
+      width: 100%;
+    }
+
+    .mobile-nav .main-nav a {
+      padding: 16px 24px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .close-mobile-nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--accent);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+
+    .close-mobile-nav:hover,
+    .close-mobile-nav:focus {
+      background: var(--accent-light);
+      outline: none;
+    }
+
+    /* Page Banner */
+    .page-banner {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: white;
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+      animation: move 20s linear infinite;
+    }
+
+    @keyframes move {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(60px, 60px); }
+    }
+
+    .page-banner h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+      font-family: 'Amiri', serif;
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .page-banner p {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      opacity: 0.9;
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 0.8s ease 0.2s both;
+    }
+
+    /* Apps Content */
+    .content {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      color: var(--accent);
+      margin-bottom: 60px;
+      position: relative;
+      padding-bottom: 16px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--accent));
+      border-radius: 3px;
+    }
+
+    .app-showcase {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px;
+      margin-bottom: 60px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .app-showcase::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .app-showcase:hover::before {
+      transform: scaleX(1);
+    }
+
+    .app-showcase:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .app-logo {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .app-logo img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .app-showcase:hover .app-logo img {
+      transform: scale(1.05);
+    }
+
+    .app-showcase h2 {
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 2rem;
+      font-family: 'Amiri', serif;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .app-showcase h2 i {
+      color: var(--gold);
+      font-size: 1.8rem;
+    }
+
+    .app-tagline {
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .app-tagline::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--accent));
+      border-radius: 1px;
+    }
+
+    .app-description {
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .app-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 30px;
+      align-items: start;
+    }
+
+    .app-screenshot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .screenshots-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      width: 100%;
+    }
+
+    .screenshots-gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .screenshots-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .app-features {
+      padding: 20px;
+      background: var(--accent-light);
+      border-radius: var(--radius);
+      border-left: 4px solid var(--accent);
+    }
+
+    .app-features p {
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .app-features ul {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .app-features li {
+      padding: 12px 0 12px 30px;
+      position: relative;
+      transition: var(--transition);
+      border-radius: 6px;
+      color: #111;
+    }
+
+    .app-features li:hover {
+      background: rgba(11, 107, 58, 0.05);
+      padding-left: 35px;
+    }
+
+    .app-features li::before {
+      content: '✓';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+      font-size: 1.2rem;
+      top: 12px;
+    }
+
+    /* Buttons */
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      min-width: 160px;
+      text-align: center;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      background: var(--accent-dark);
+      outline: none;
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent-light);
+    }
+
+    .btn.ghost:hover,
+    .btn.ghost:focus {
+      background: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn.learn-more {
+      background: var(--gold);
+    }
+
+    .btn.learn-more:hover,
+    .btn.learn-more:focus {
+      background: #b8883a;
+    }
+
+    /* Apps Preview Section */
+    .apps-preview {
+      padding: 80px 0;
+      background: var(--accent-light);
+      border-radius: 16px;
+      margin: 40px 0;
+    }
+
+    .app-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .app {
+      background: var(--card);
+      padding: 40px 32px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid transparent;
+    }
+
+    .app:hover,
+    .app:focus-within {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent-light);
+    }
+
+    .app h3 {
+      color: var(--accent);
+      margin: 20px 0 16px;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+    }
+
+    .app h3 i {
+      font-size: 1.6rem;
+      color: var(--gold);
+    }
+
+    .app p {
+      color: var(--muted);
+      margin-bottom: 28px;
+      line-height: 1.7;
+      flex-grow: 1;
+      font-size: 1rem;
+    }
+
+    /* Support Section */
+    .support-section {
+      background: var(--gold-light);
+      border-radius: var(--radius);
+      padding: 40px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .support-section h2 {
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-size: 2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .support-section h2 i {
+      color: var(--gold);
+    }
+
+    .support-section p {
+      color: var(--muted);
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 60px 0 40px;
+      margin-top: 80px;
+      border-top: 1px solid var(--border-color);
+      background: var(--accent-light);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-brand .brand {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      display: inline-flex;
+    }
+
+    .footer-description {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: var(--transition);
+      font-weight: 500;
+      padding: 4px 0;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus {
+      color: var(--accent);
+      outline: none;
+    }
+
+    .footer-social {
+      flex: 0;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--card);
+      color: var(--accent);
+      transition: var(--transition);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    .social-links a:hover,
+    .social-links a:focus {
+      background: var(--accent);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      outline: none;
+    }
+
+    .footer-bottom {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .small {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Loading Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate {
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      .app-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .screenshots-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .app-list {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-nav-toggle {
+        display: block;
+      }
+      
+      .main-nav:not(.mobile-nav .main-nav) {
+        display: none;
+      }
+      
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+      }
+      
+      .footer-brand {
+        min-width: auto;
+      }
+      
+      .footer-links, .social-links {
+        justify-content: center;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .page-banner {
+        padding: 60px 0 40px;
+      }
+
+      .app-showcase {
+        padding: 30px 20px;
+      }
+
+      .screenshots-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .support-section {
+        padding: 30px 20px;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .btn {
+        width: 100%;
+        min-width: auto;
+      }
+      
+      .app {
+        padding: 24px;
+      }
+      
+      .apps-preview {
+        margin: 20px 0;
+        padding: 60px 0;
+      }
+    }
+
+    /* Focus Management */
+    .focus-trap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Screen Reader Only */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    /* High contrast mode */
+    @media (prefers-contrast: high) {
+      :root {
+        --shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.4);
+        --border-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      .site-header,
+      .mobile-nav-overlay,
+      .hero-cta,
+      .btn,
+      .site-footer {
+        display: none;
+      }
+      
+      body {
+        background: white;
+        color: black;
+      }
+      
+      .app-showcase {
+        border: 1px solid black;
+        box-shadow: none;
+      }
+    }
+
+    /* Modal Styles */
+    .image-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-modal.active { 
+      opacity: 1; 
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      text-align: center;
+      transform: scale(0.8);
+      transition: transform 0.3s ease;
+    }
+
+    .image-modal.active .modal-content { 
+      transform: scale(1); 
+    }
+
+    .modal-image {
+      max-width: 100%;
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .modal-caption {
+      color: white;
+      margin-top: 16px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Deenify - Home">
+        <i class="fas fa-mosque" aria-hidden="true"></i>
+        <span>Deenify</span>
+      </a>
+      
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Islam</a>
+        <a href="quran.html">Quran & Hadith</a>
+        <a href="apps.html" class="active" aria-current="page">Our Apps</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      
+      <button class="mobile-nav-toggle" aria-label="Open mobile navigation" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <h1>Our Mobile Apps</h1>
+      <h2 style="padding-top: 0px; color: #f7931e;">Powered by Deenify</h2>
+      <p>Transform Your Spiritual Practice with Islamic Technology</p>
+    </div>
+  </section>
+
+  <main class="container content" id="main-content" role="main">
+    <section class="apps-preview" aria-labelledby="apps-title">
+      <h2 id="apps-title" class="section-title">Featured Islamic Applications</h2>
+      <div class="app-list">
+        <article class="app animate">
+          <div class="app-logo">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ff6b35;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23f7931e;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad1)' width='120' height='120' rx='24'/%3E%3Ctext fill='%23ffffff' font-family='sans-serif' font-size='40' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E🔥%3C/text%3E%3C/svg%3E" 
+                 alt="Streakly App Logo - Build Good Habits">
+          </div>
+          <h3><i class="fas fa-fire" aria-hidden="true"></i>Streakly</h3>
+          <p>Transform your spiritual practice with our habit tracking app. Maintain streaks for prayer, Quran reading, and other good deeds with daily reminders and motivational insights.</p>
+          <a class="btn" href="#streakly-details" aria-describedby="streakly-desc">
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
+            <span>Learn More</span>
+          </a>
+          <span class="sr-only" id="streakly-desc">Learn more about Streakly habit tracking app</span>
+        </article>
+        
+        <article class="app animate delay-1">
+          <div class="app-logo">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cdefs%3E%3ClinearGradient id='goldGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffd700;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23b8860b;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23goldGrad)' width='120' height='120' rx='24'/%3E%3Ctext fill='%23ffffff' font-family='serif' font-size='35' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E☪%3C/text%3E%3C/svg%3E" 
+                 alt="Islam99 App Logo - Comprehensive Islamic Knowledge">
+          </div>
+          <h3><i class="fas fa-quran" aria-hidden="true"></i>Islam99</h3>
+          <p>Deepen your connection with the Quran through our comprehensive study app featuring translations, transliterations, audio recitations, and personalized reading plans.</p>
+          <a class="btn" href="#islam99-details" aria-describedby="islam99-desc">
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
+            <span>Learn More</span>
+          </a>
+          <span class="sr-only" id="islam99-desc">Learn more about Islam99 Quran study app</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="streakly-details" class="app-showcase animate delay-2">
+      <div class="app-logo">
+        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ff6b35;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23f7931e;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad1)' width='120' height='120' rx='24'/%3E%3Ctext fill='%23ffffff' font-family='sans-serif' font-size='40' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E🔥%3C/text%3E%3C/svg%3E" 
+             alt="Streakly App Logo - Build Good Habits">
+      </div>
+      <h2>
+        <i class="fas fa-fire" aria-hidden="true"></i> 
+        <span>Streakly</span>
+      </h2>
+      <p class="app-tagline">Build Good Habits, Stay Consistent with Faith</p>
+      <p class="app-description">Streakly helps Muslims build strong daily habits by tracking salah, Quran reading, and personal goals with streak motivation and beautiful progress visualization.</p>
+      
+      <div class="app-grid">
+        <div class="app-screenshot">
+          <div class="screenshots-gallery">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='480' viewBox='0 0 240 480'%3E%3Cdefs%3E%3ClinearGradient id='bg1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23f8f9fa' width='240' height='480' rx='20'/%3E%3Crect fill='url(%23bg1)' width='240' height='80'/%3E%3Ccircle fill='%23ffffff' cx='120' cy='40' r='16'/%3E%3Crect fill='%23ffffff' x='20' y='120' width='200' height='60' rx='12'/%3E%3Crect fill='%23e9ecef' x='30' y='130' width='120' height='8' rx='4'/%3E%3Crect fill='%23ff6b35' x='30' y='150' width='80' height='20' rx='10'/%3E%3Ctext fill='%23495057' font-family='sans-serif' font-size='12' x='120' y='300' text-anchor='middle'%3EDaily Progress%3C/text%3E%3C/svg%3E" 
+                 alt="Streakly Dashboard - Track your daily Islamic habits">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='480' viewBox='0 0 240 480'%3E%3Cdefs%3E%3ClinearGradient id='bg2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2311998e;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2338ef7d;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23f8f9fa' width='240' height='480' rx='20'/%3E%3Crect fill='url(%23bg2)' width='240' height='80'/%3E%3Ccircle fill='%23ffffff' cx='120' cy='40' r='16'/%3E%3Ccircle fill='%23ff6b35' cx='60' cy='200' r='8'/%3E%3Ccircle fill='%23ff6b35' cx='80' cy='180' r='8'/%3E%3Ccircle fill='%23ff6b35' cx='100' cy='160' r='8'/%3E%3Ccircle fill='%23ff6b35' cx='120' cy='140' r='8'/%3E%3Ccircle fill='%23ff6b35' cx='140' cy='160' r='8'/%3E%3Ccircle fill='%23ff6b35' cx='160' cy='180' r='8'/%3E%3Ccircle fill='%23ff6b35' cx='180' cy='200' r='8'/%3E%3Ctext fill='%23495057' font-family='sans-serif' font-size='12' x='120' y='300' text-anchor='middle'%3EStreak Visualization%3C/text%3E%3C/svg%3E" 
+                 alt="Streakly Tracking - Visual streak calendar">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='480' viewBox='0 0 240 480'%3E%3Cdefs%3E%3ClinearGradient id='bg3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffecd2;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23fcb69f;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23f8f9fa' width='240' height='480' rx='20'/%3E%3Crect fill='url(%23bg3)' width='240' height='80'/%3E%3Ccircle fill='%23ffffff' cx='120' cy='40' r='16'/%3E%3Ccircle fill='%23ff6b35' cx='120' cy='200' r='50' stroke='%23ffffff' stroke-width='8'/%3E%3Ctext fill='%23ffffff' font-family='sans-serif' font-size='20' x='120' y='180' text-anchor='middle'%3E75%3C/text%3E%3Ctext fill='%23ffffff' font-family='sans-serif' font-size='10' x='120' y='200' text-anchor='middle'%3EProgress%3C/text%3E%3Ctext fill='%23495057' font-family='sans-serif' font-size='12' x='120' y='300' text-anchor='middle'%3EProgress Analytics%3C/text%3E%3C/svg%3E" 
+                 alt="Streakly Analytics - Detailed progress statistics">
+          </div>
+        </div>
+        <div class="app-features">
+          <p><i class="fas fa-star" aria-hidden="true"></i> Key Features:</p>
+          <ul>
+            <li>Daily streak tracking for Salah, Quran, and personal Islamic habits</li>
+            <li>Smart Fajr wake-up reminders with customizable times</li>
+            <li>Beautiful progress charts and analytics to stay motivated</li>
+            <li>Inspirational notifications with Quran verses and Hadith</li>
+            <li>Complete privacy with secure local data storage</li>
+            <li>Dark mode support for comfortable night usage</li>
+          </ul>
+          <div class="hero-cta">
+            <a class="btn" href="#" data-app="Streakly" aria-label="Download Streakly from Play Store">
+              <i class="fab fa-google-play" aria-hidden="true"></i> 
+              <span>Play Store</span>
+            </a>
+            <a class="btn ghost" href="#" data-app="Streakly" aria-label="Download Streakly APK directly">
+              <i class="fas fa-download" aria-hidden="true"></i> 
+              <span>Download APK</span>
+            </a>
+            <a class="btn learn-more" href="#" aria-label="Contact for more info about Streakly">
+              <i class="fas fa-envelope" aria-hidden="true"></i> 
+              <span>Contact Us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="islam99-details" class="app-showcase animate delay-3">
+      <div class="app-logo">
+        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cdefs%3E%3ClinearGradient id='goldGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffd700;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23b8860b;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23goldGrad)' width='120' height='120' rx='24'/%3E%3Ctext fill='%23ffffff' font-family='serif' font-size='35' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E☪%3C/text%3E%3C/svg%3E" 
+             alt="Islam99 App Logo - Comprehensive Islamic Knowledge">
+      </div>
+      <h2>
+        <i class="fas fa-quran" aria-hidden="true"></i> 
+        <span>Islam99</span>
+      </h2>
+      <p class="app-tagline">Your Complete Gateway to Quran & Sunnah</p>
+      <p class="app-description">Islam99 is a comprehensive Islamic companion that provides complete Quran access, authentic Hadith collections, prayer reminders, and verified Islamic knowledge to strengthen your spiritual journey.</p>
+      
+      <div class="app-grid">
+        <div class="app-screenshot">
+          <div class="screenshots-gallery">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='480' viewBox='0 0 240 480'%3E%3Cdefs%3E%3ClinearGradient id='islamBg1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230b6b3a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2308502d;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23f8f9fa' width='240' height='480' rx='20'/%3E%3Crect fill='url(%23islamBg1)' width='240' height='80'/%3E%3Ctext fill='%23ffffff' font-family='serif' font-size='18' x='120' y='50' text-anchor='middle'%3EQuran Reader%3C/text%3E%3Crect fill='%23ffffff' x='20' y='100' width='200' height='300' rx='8'/%3E%3Ctext fill='%230b6b3a' font-family='serif' font-size='16' x='30' y='130' text-anchor='start'%3Eبِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ%3C/text%3E%3Ctext fill='%23666' font-size='12' x='30' y='160' text-anchor='start'%3EIn the name of Allah,%3C/text%3E%3Ctext fill='%23666' font-size='12' x='30' y='180' text-anchor='start'%3Ethe Most Gracious,%3C/text%3E%3Ctext fill='%23666' font-size='12' x='30' y='200' text-anchor='start'%3Ethe Most Merciful%3C/text%3E%3C/svg%3E" 
+                 alt="Islam99 Quran Reader - Read Quran with translation">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='480' viewBox='0 0 240 480'%3E%3Cdefs%3E%3ClinearGradient id='islamBg2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23c89a3a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23b8883a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23f8f9fa' width='240' height='480' rx='20'/%3E%3Crect fill='url(%23islamBg2)' width='240' height='80'/%3E%3Ctext fill='%23ffffff' font-family='serif' font-size='18' x='120' y='50' text-anchor='middle'%3EHadith Collections%3C/text%3E%3Crect fill='%23ffffff' x='20' y='110' width='200' height='50' rx='8'/%3E%3Ctext fill='%23c89a3a' font-size='14' x='30' y='130' text-anchor='start'%3ESahih Bukhari%3C/text%3E%3Ctext fill='%23666' font-size='10' x='30' y='145' text-anchor='start'%3E7,563 Hadith%3C/text%3E%3Crect fill='%23ffffff' x='20' y='170' width='200' height='50' rx='8'/%3E%3Ctext fill='%23c89a3a' font-size='14' x='30' y='190' text-anchor='start'%3ESahih Muslim%3C/text%3E%3Ctext fill='%23666' font-size='10' x='30' y='205' text-anchor='start'%3E7,190 Hadith%3C/text%3E%3Crect fill='%23ffffff' x='20' y='230' width='200' height='50' rx='8'/%3E%3Ctext fill='%23c89a3a' font-size='14' x='30' y='250' text-anchor='start'%3E40 Hadith Nawawi%3C/text%3E%3Ctext fill='%23666' font-size='10' x='30' y='265' text-anchor='start'%3E42 Selected Hadith%3C/text%3E%3C/svg%3E" 
+                 alt="Islam99 Hadith Collections - Access authentic Hadith">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='480' viewBox='0 0 240 480'%3E%3Cdefs%3E%3ClinearGradient id='islamBg3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23f8f9fa' width='240' height='480' rx='20'/%3E%3Crect fill='url(%23islamBg3)' width='240' height='80'/%3E%3Ctext fill='%23ffffff' font-family='serif' font-size='18' x='120' y='50' text-anchor='middle'%3EPrayer Times%3C/text%3E%3Crect fill='%23ffffff' x='20' y='110' width='200' height='40' rx='8'/%3E%3Ctext fill='%23667eea' font-size='14' x='30' y='130' text-anchor='start'%3EFajr%3C/text%3E%3Ctext fill='%23333' font-size='14' x='180' y='130' text-anchor='end'%3E5:30 AM%3C/text%3E%3Crect fill='%23ffffff' x='20' y='160' width='200' height='40' rx='8'/%3E%3Ctext fill='%23667eea' font-size='14' x='30' y='180' text-anchor='start'%3EDhuhr%3C/text%3E%3Ctext fill='%23333' font-size='14' x='180' y='180' text-anchor='end'%3E12:45 PM%3C/text%3E%3Crect fill='%23ffffff' x='20' y='210' width='200' height='40' rx='8'/%3E%3Ctext fill='%23667eea' font-size='14' x='30' y='230' text-anchor='start'%3EAsr%3C/text%3E%3Ctext fill='%23333' font-size='14' x='180' y='230' text-anchor='end'%3E4:15 PM%3C/text%3E%3Crect fill='%23ffffff' x='20' y='260' width='200' height='40' rx='8'/%3E%3Ctext fill='%23667eea' font-size='14' x='30' y='280' text-anchor='start'%3EMaghrib%3C/text%3E%3Ctext fill='%23333' font-size='14' x='180' y='280' text-anchor='end'%3E6:20 PM%3C/text%3E%3Crect fill='%23ffffff' x='20' y='310' width='200' height='40' rx='8'/%3E%3Ctext fill='%23667eea' font-size='14' x='30' y='330' text-anchor='start'%3EIsha%3C/text%3E%3Ctext fill='%23333' font-size='14' x='180' y='330' text-anchor='end'%3E7:45 PM%3C/text%3E%3C/svg%3E" 
+                 alt="Islam99 Prayer Times - Never miss prayer time">
+          </div>
+        </div>
+        <div class="app-features">
+          <p><i class="fas fa-star" aria-hidden="true"></i> Comprehensive Features:</p>
+          <ul>
+            <li>Complete Quran with Arabic, English, Urdu, and Roman Urdu translations</li>
+            <li>Authentic Hadith collections from Bukhari, Muslim, Tirmidhi, and more</li>
+            <li>Accurate prayer times with customizable Adhan notifications</li>
+            <li>High-quality audio recitation from renowned Qaris worldwide</li>
+            <li>Advanced search functionality across Quran and Hadith</li>
+            <li>Bookmark favorite verses and Hadith for quick access</li>
+            <li>Offline mode for uninterrupted spiritual practice</li>
+          </ul>
+          <div class="hero-cta">
+            <a class="btn" href="#" data-app="Islam99" aria-label="Download Islam99 from Play Store">
+              <i class="fab fa-google-play" aria-hidden="true"></i> 
+              <span>Play Store</span>
+            </a>
+            <a class="btn ghost" href="#" data-app="Islam99" aria-label="Download Islam99 APK directly">
+              <i class="fas fa-download" aria-hidden="true"></i> 
+              <span>Download APK</span>
+            </a>
+            <a class="btn learn-more" href="#" aria-label="Contact for more info about Islam99">
+              <i class="fas fa-envelope" aria-hidden="true"></i> 
+              <span>Contact Us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-section animate delay-4">
+      <h2>
+        <i class="fas fa-headset" aria-hidden="true"></i> 
+        <span>App Support & Feedback</span>
+      </h2>
+      <p>Having issues with our apps or have brilliant feature suggestions? We value every piece of feedback from our amazing community!</p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn" aria-label="Contact our support team">
+          <i class="fas fa-envelope" aria-hidden="true"></i> 
+          <span>Contact Support</span>
+        </a>
+        <a href="contact.html" class="btn ghost" aria-label="Submit feedback or feature request">
+          <i class="fas fa-lightbulb" aria-hidden="true"></i> 
+          <span>Submit Feedback</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Deenify - Home">
+            <i class="fas fa-mosque" aria-hidden="true"></i>
+            <span>Deenify</span>
+          </a>
+          <p class="footer-description">Your comprehensive digital companion for Islamic faith, featuring Quran study, prayer tools, and spiritual growth resources.</p>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+        
+        <div class="footer-social">
+          <h3 class="sr-only">Follow us on social media</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Follow us on Facebook" rel="noopener">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Follow us on Twitter" rel="noopener">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Follow us on Instagram" rel="noopener">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Subscribe to our YouTube channel" rel="noopener">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="small">&copy; 2025 Deenify. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+      
+      // Mobile navigation functionality - Matching index.html exactly
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+      const body = document.body;
+      let mobileNav = null;
+      
+      // Create mobile navigation overlay
+      function createMobileNav() {
+        if (mobileNav) return;
+        
+        mobileNav = document.createElement('div');
+        mobileNav.className = 'mobile-nav-overlay';
+        mobileNav.setAttribute('role', 'dialog');
+        mobileNav.setAttribute('aria-modal', 'true');
+        mobileNav.setAttribute('aria-label', 'Mobile navigation');
+        
+        mobileNav.innerHTML = `
+          <div class="mobile-nav">
+            <button class="close-mobile-nav" aria-label="Close mobile navigation">
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <nav class="main-nav" role="navigation" aria-label="Mobile navigation">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Islam</a>
+              <a href="quran.html">Quran & Hadith</a>
+              <a href="apps.html" class="active" aria-current="page">Our Apps</a>
+              <a href="contact.html">Contact</a>
+            </nav>
+          </div>
+        `;
+        
+        body.appendChild(mobileNav);
+        
+        // Add event listeners
+        const closeBtn = mobileNav.querySelector('.close-mobile-nav');
+        closeBtn.addEventListener('click', closeMobileNav);
+        
+        // Close on escape key
+        document.addEventListener('keydown', handleEscapeKey);
+        
+        // Close when clicking outside
+        mobileNav.addEventListener('click', function(e) {
+          if (e.target === mobileNav) {
+            closeMobileNav();
+          }
+        });
+        
+        // Close mobile nav when clicking on links
+        const mobileNavLinks = mobileNav.querySelectorAll('.main-nav a');
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', closeMobileNav);
+        });
+      }
+      
+      function openMobileNav() {
+        createMobileNav();
+        mobileNav.classList.add('active');
+        body.style.overflow = 'hidden';
+        mobileNavToggle.setAttribute('aria-expanded', 'true');
+        
+        // Focus management
+        const closeBtn = mobileNav.querySelector('.close-mobile-nav');
+        closeBtn.focus();
+      }
+      
+      function closeMobileNav() {
+        if (!mobileNav) return;
+        
+        mobileNav.classList.remove('active');
+        body.style.overflow = '';
+        mobileNavToggle.setAttribute('aria-expanded', 'false');
+        mobileNavToggle.focus();
+      }
+      
+      function handleEscapeKey(e) {
+        if (e.key === 'Escape' && mobileNav && mobileNav.classList.contains('active')) {
+          closeMobileNav();
+        }
+      }
+      
+      // Event listeners
+      mobileNavToggle.addEventListener('click', openMobileNav);
+      
+      // Intersection Observer for animations - Matching index.html
+      const animatedElements = document.querySelectorAll('.animate');
+      
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+        
+        animatedElements.forEach(el => {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback for browsers without IntersectionObserver
+        animatedElements.forEach(el => {
+          el.style.opacity = '1';
+        });
+      }
+
+      // App download tracking with enhanced feedback
+      const downloadButtons = document.querySelectorAll('[data-app]');
+      downloadButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const appName = this.getAttribute('data-app');
+          const downloadType = this.textContent.includes('Play Store') ? 'playstore' : 'apk';
+          
+          // Show loading state
+          const originalContent = this.innerHTML;
+          this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+          this.style.pointerEvents = 'none';
+          
+          // Simulate download process
+          setTimeout(() => {
+            console.log(`Download initiated: ${appName} via ${downloadType}`);
+            
+            // Show success message
+            this.innerHTML = '<i class="fas fa-check"></i> Coming Soon!';
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+              this.innerHTML = originalContent;
+              this.style.pointerEvents = 'auto';
+            }, 3000);
+          }, 1500);
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.addEventListener('click', function(e) {
+        if (e.target.matches('a[href^="#"]')) {
+          e.preventDefault();
+          const target = document.querySelector(e.target.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+
+      // Enhanced keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        // Handle tab trapping in mobile nav
+        if (mobileNav && mobileNav.classList.contains('active')) {
+          const focusableElements = mobileNav.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
+          const firstFocusable = focusableElements[0];
+          const lastFocusable = focusableElements[focusableElements.length - 1];
+          
+          if (e.key === 'Tab') {
+            if (e.shiftKey) {
+              if (document.activeElement === firstFocusable) {
+                lastFocusable.focus();
+                e.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastFocusable) {
+                firstFocusable.focus();
+                e.preventDefault();
+              }
+            }
+          }
+        }
+      });
+
+      // Screenshot gallery modal functionality
+      const screenshots = document.querySelectorAll('.screenshots-gallery img');
+      screenshots.forEach((screenshot, index) => {
+        screenshot.addEventListener('click', function() {
+          createImageModal(this.src, this.alt, index);
+        });
+      });
+
+      function createImageModal(src, alt, index) {
+        const modal = document.createElement('div');
+        modal.className = 'image-modal';
+        modal.innerHTML = `
+          <div class="modal-backdrop"></div>
+          <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <img src="${src}" alt="${alt}" class="modal-image">
+            <p class="modal-caption">${alt}</p>
+          </div>
+        `;
+        
+        document.body.appendChild(modal);
+        
+        // Animate modal in
+        setTimeout(() => modal.classList.add('active'), 50);
+        
+        // Close modal events
+        const closeModal = () => {
+          modal.classList.remove('active');
+          setTimeout(() => document.body.removeChild(modal), 300);
+          document.body.style.overflow = '';
+        };
+        
+        modal.querySelector('.modal-close').addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+        
+        // Escape key to close modal
+        const escapeHandler = (e) => {
+          if (e.key === 'Escape') {
+            closeModal();
+            document.removeEventListener('keydown', escapeHandler);
+          }
+        };
+        document.addEventListener('keydown', escapeHandler);
+        
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Error handling for images
+      document.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG') {
+          e.target.style.display = 'none';
+          console.warn('Image failed to load:', e.target.src);
+        }
+      }, true);
+
+      // Page load optimizations
+      window.addEventListener('load', function() {
+        // Add loaded class for any additional styling
+        body.classList.add('loaded');
+        
+        // Preload critical pages
+        const criticalPages = ['index.html', 'quran.html', 'contact.html'];
+        criticalPages.forEach(page => {
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.href = page;
+          document.head.appendChild(link);
+        });
+      });
+
+      // Analytics and user interaction tracking (placeholder)
+      function trackInteraction(action, element) {
+        // Implement analytics tracking here
+        console.log('User interaction:', action, element);
+      }
+      
+      // Track button clicks
+      document.addEventListener('click', function(e) {
+        if (e.target.matches('.btn, .app, .app-showcase')) {
+          const elementType = e.target.classList.contains('btn') ? 'button' : 
+                            e.target.classList.contains('app') ? 'app-card' : 'app-showcase';
+          trackInteraction('click', elementType);
+        }
+      });
+
+      console.log('Deenify Apps - Professional website initialized successfully!');
+    })();
+  </script>
+</body>
+</html>

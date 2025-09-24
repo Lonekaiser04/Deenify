@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Deenify - Your comprehensive Islamic hub for Quran ,hadith, Islamic apps, Islamic resources, and other features">
+  <meta name="keywords" content="Islam, Quran,Hadith, Islamic Apps, Streakly, Islam99, download Streakly, download Islam99, Prophet Mohammad(SAW)">
+  <meta name="author" content="Deenify">
+  <meta property="og:title" content="Deenify | Your Comprehensive Islamic Hub">
+  <meta property="og:description" content="Your comprehensive digital companion for Quran study, prayer guidance, and Islamic lifestyle resources">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deenify.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Deenify | Your Comprehensive Islamic Hub</title>
+  
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+  
+  <!-- Font Awesome with integrity check -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
+  <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
+  
+  <style>
+    :root {
+      --bg: #fbfcfb;
+      --card: #ffffff;
+      --accent: #0b6b3a;
+      --accent-light: rgba(11, 107, 58, 0.1);
+      --accent-dark: #08502d;
+      --muted: #6b6b6b;
+      --gold: #c89a3a;
+      --gold-light: rgba(200, 154, 58, 0.1);
+      --shadow: 0 6px 18px rgba(11, 107, 58, 0.06);
+      --shadow-hover: 0 12px 24px rgba(11, 107, 58, 0.12);
+      --radius: 12px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --max-width: 1200px;
+      --border-color: rgba(0, 0, 0, 0.08);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: #111;
+      font-family: var(--font-family);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: var(--accent);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 1000;
+    }
+
+    .skip-link:focus {
+      top: 6px;
+    }
+
+    /* Header & Navigation */
+    .site-header {
+      background: linear-gradient(90deg, var(--accent-light), rgba(200, 154, 58, 0.03));
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-family: 'Amiri', serif;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .brand:hover {
+      transform: scale(1.05);
+    }
+
+    .brand i {
+      font-size: 1.4rem;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+
+    .main-nav li {
+      margin-left: 4px;
+    }
+
+    .main-nav a {
+      display: block;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: var(--transition);
+      position: relative;
+      font-weight: 500;
+    }
+
+    .main-nav a:hover, 
+    .main-nav a:focus,
+    .main-nav a.active {
+      color: var(--accent);
+      background: var(--accent-light);
+      outline: none;
+    }
+
+    .main-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 12px;
+      right: 12px;
+      height: 2px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+
+    .mobile-nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--accent);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+
+    .mobile-nav-toggle:hover,
+    .mobile-nav-toggle:focus {
+      background: var(--accent-light);
+      outline: none;
+    }
+
+    /* Mobile Navigation Overlay */
+    .mobile-nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .mobile-nav-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav {
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .mobile-nav .main-nav {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mobile-nav .main-nav li {
+      margin: 0;
+      width: 100%;
+    }
+
+    .mobile-nav .main-nav a {
+      padding: 16px 24px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .close-mobile-nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--accent);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+
+    .close-mobile-nav:hover,
+    .close-mobile-nav:focus {
+      background: var(--accent-light);
+      outline: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 80px 0;
+      min-height: 85vh;
+    }
+
+    .hero-content h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      color: var(--accent);
+      line-height: 1.2;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      min-width: 160px;
+      text-align: center;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      background: var(--accent-dark);
+      outline: none;
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent-light);
+    }
+
+    .btn.ghost:hover,
+    .btn.ghost:focus {
+      background: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero-quote {
+      background: var(--card);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin: 0;
+      border-left: 5px solid var(--gold);
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .hero-quote:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .hero-quote::before {
+      content: '"';
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 4rem;
+      color: var(--gold-light);
+      font-family: 'Amiri', serif;
+      line-height: 1;
+    }
+
+    .hero-quote blockquote {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-quote p {
+      font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+      line-height: 1.6;
+      color: #333;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .hero-quote footer {
+      font-weight: 600;
+      color: var(--muted);
+      font-size: 1rem;
+      text-align: right;
+      font-style: normal;
+    }
+
+    /* Features & Cards */
+    .features {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      color: var(--accent);
+      margin-bottom: 60px;
+      position: relative;
+      padding-bottom: 16px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--accent));
+      border-radius: 3px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      text-align: center;
+      border: 1px solid transparent;
+    }
+
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent-light);
+    }
+
+    .card h3 {
+      color: var(--accent);
+      margin: 20px 0 16px;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-weight: 600;
+    }
+
+    .card h3 i {
+      font-size: 1.6rem;
+      color: var(--gold);
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    /* Apps Section */
+    .apps-preview {
+      padding: 80px 0;
+      background: var(--accent-light);
+      border-radius: 16px;
+      margin: 40px 0;
+    }
+
+    .app-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .app {
+      background: var(--card);
+      padding: 40px 32px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid transparent;
+    }
+
+    .app:hover,
+    .app:focus-within {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent-light);
+    }
+
+    .app h3 {
+      color: var(--accent);
+      margin: 20px 0 16px;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+    }
+
+    .app h3 i {
+      font-size: 1.6rem;
+      color: var(--gold);
+    }
+
+    .app p {
+      color: var(--muted);
+      margin-bottom: 28px;
+      line-height: 1.7;
+      flex-grow: 1;
+      font-size: 1rem;
+    }
+
+    /* Daily Tools */
+    .daily-tools {
+      padding: 80px 0;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .tool-card {
+      background: var(--card);
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      text-align: center;
+      border: 1px solid transparent;
+    }
+
+    .tool-card:hover,
+    .tool-card:focus-within {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent-light);
+    }
+
+    .tool-card h3 {
+      color: var(--accent);
+      margin: 20px 0 16px;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-weight: 600;
+    }
+
+    .tool-card h3 i {
+      font-size: 1.6rem;
+      color: var(--gold);
+    }
+
+    .tool-card p {
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    /* Community Section */
+    .community {
+      padding: 80px 0;
+      background: var(--gold-light);
+      border-radius: 16px;
+      margin: 40px 0;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-top: 50px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .stat-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .stat-number {
+      font-size: clamp(2.5rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 60px 0 40px;
+      margin-top: 80px;
+      border-top: 1px solid var(--border-color);
+      background: var(--accent-light);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-brand .brand {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      display: inline-flex;
+    }
+
+    .footer-description {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: var(--transition);
+      font-weight: 500;
+      padding: 4px 0;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus {
+      color: var(--accent);
+      outline: none;
+    }
+
+    .footer-social {
+      flex: 0;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--card);
+      color: var(--accent);
+      transition: var(--transition);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    .social-links a:hover,
+    .social-links a:focus {
+      background: var(--accent);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      outline: none;
+    }
+
+    .footer-bottom {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .small {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Loading Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate {
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+        padding: 60px 0;
+      }
+      
+      .hero-cta {
+        justify-content: center;
+      }
+      
+      .app-list {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+      
+      .stats {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-nav-toggle {
+        display: block;
+      }
+      
+      .main-nav:not(.mobile-nav .main-nav) {
+        display: none;
+      }
+      
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+      }
+      
+      .footer-brand {
+        min-width: auto;
+      }
+      
+      .footer-links, .social-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+      
+      .hero {
+        padding: 40px 0;
+        min-height: 70vh;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .btn {
+        width: 100%;
+        min-width: auto;
+      }
+      
+      .hero-quote {
+        padding: 28px;
+      }
+      
+      .card, .tool-card, .app {
+        padding: 24px;
+      }
+      
+      .apps-preview, .community {
+        margin: 20px 0;
+        padding: 60px 0;
+      }
+      
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Focus Management */
+    .focus-trap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    /* High contrast mode */
+    @media (prefers-contrast: high) {
+      :root {
+        --shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.4);
+        --border-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      .site-header,
+      .mobile-nav-overlay,
+      .hero-cta,
+      .btn,
+      .site-footer {
+        display: none;
+      }
+      
+      body {
+        background: white;
+        color: black;
+      }
+      
+      .hero-quote {
+        border: 1px solid black;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Deenify - Home">
+        <i class="fas fa-mosque" aria-hidden="true"></i>
+        <span>Deenify</span>
+      </a>
+      
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="about.html">About Islam</a>
+        <a href="quran.html">Quran & Hadith</a>
+        <a href="apps.html">Our Apps</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      
+      <button class="mobile-nav-toggle" aria-label="Open mobile navigation" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Enrich Your Islamic Journey with Deenify</h1>
+        <p class="lead">Your comprehensive digital companion for Quran study, prayer guidance, and Islamic lifestyle resources. Connect with your faith through our innovative tools and applications.</p>
+        <div class="hero-cta">
+          <a class="btn" href="apps.html" aria-describedby="apps-desc">
+            <i class="fas fa-download" aria-hidden="true"></i>
+            <span>Explore Our Apps</span>
+          </a>
+          <a class="btn ghost" href="quran.html" aria-describedby="quran-desc">
+            <i class="fas fa-book-quran" aria-hidden="true"></i>
+            <span>Read Quran</span>
+          </a>
+        </div>
+        <div class="sr-only">
+          <span id="apps-desc">Discover our Islamic mobile applications</span>
+          <span id="quran-desc">Access Quran with translations and tafsir</span>
+        </div>
+      </div>
+      
+      <aside class="hero-quote">
+        <blockquote>
+          <p>"Indeed, this Qur'an guides to that which is most suitable and gives good tidings to the believers who do righteous deeds that they will have a great reward."</p>
+          <footer>— Quran 17:9</footer>
+        </blockquote>
+      </aside>
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title" class="section-title">What You'll Discover</h2>
+      <div class="cards">
+        <article class="card animate">
+          <h3><i class="fas fa-book-open" aria-hidden="true"></i>Quran & Tafsir</h3>
+          <p>Access selected surahs with translations, tafsir, and roman transliteration for deeper understanding and reflection.</p>
+        </article>
+        <article class="card animate delay-1">
+          <h3><i class="fas fa-clock" aria-hidden="true"></i>Prayer Tools</h3>
+          <p>Accurate prayer times, Qibla direction, and Hijri calendar—all personalized to your location.</p>
+        </article>
+        <article class="card animate delay-2">
+          <h3><i class="fas fa-mobile-alt" aria-hidden="true"></i>Islamic Apps</h3>
+          <p>Enhance your spiritual practice with our dedicated applications for habit tracking and Quran study.</p>
+        </article>
+        <article class="card animate delay-3">
+          <h3><i class="fas fa-graduation-cap" aria-hidden="true"></i>Islamic Knowledge</h3>
+          <p>Learn about Islam's pillars, Prophet Muhammad (PBUH), and Islamic teachings through curated content.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="apps-preview" aria-labelledby="apps-title">
+      <h2 id="apps-title" class="section-title">Featured Applications</h2>
+      <div class="app-list">
+        <article class="app">
+          <h3><i class="fas fa-fire" aria-hidden="true"></i>Streakly</h3>
+          <p>Transform your spiritual practice with our habit tracking app. Maintain streaks for prayer, Quran reading, and other good deeds with daily reminders and motivational insights.</p>
+          <a class="btn" href="/apps#streakly" aria-describedby="streakly-desc">
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
+            <span>Learn More</span>
+          </a>
+          <span class="sr-only" id="streakly-desc">Learn more about Streakly habit tracking app</span>
+        </article>
+        <article class="app">
+          <h3><i class="fas fa-quran" aria-hidden="true"></i>Islam99</h3>
+          <p>Deepen your connection with the Quran through our comprehensive study app featuring translations, transliterations, audio recitations, and personalized reading plans.</p>
+          <a class="btn" href="/apps#islam99" aria-describedby="islam99-desc">
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
+            <span>Learn More</span>
+          </a>
+          <span class="sr-only" id="islam99-desc">Learn more about Islam99 Quran study app</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="daily-tools" aria-labelledby="tools-title">
+      <h2 id="tools-title" class="section-title">Daily Islamic Tools</h2>
+      <div class="tools-grid">
+        <article class="tool-card">
+          <h3><i class="fas fa-calendar-alt" aria-hidden="true"></i>Hijri Date</h3>
+          <p>Keep track of the Islamic calendar with accurate Hijri dates and important Islamic events.</p>
+          <a href="/lifestyle" class="btn ghost" aria-describedby="hijri-desc">View Calendar</a>
+          <span class="sr-only" id="hijri-desc">Access Hijri calendar and Islamic dates</span>
+        </article>
+        <article class="tool-card">
+          <h3><i class="fas fa-compass" aria-hidden="true"></i>Qibla Finder</h3>
+          <p>Locate the direction of the Kaaba from anywhere in the world with our accurate Qibla compass.</p>
+          <a href="/lifestyle" class="btn ghost" aria-describedby="qibla-desc">Find Qibla</a>
+          <span class="sr-only" id="qibla-desc">Use Qibla finder to locate prayer direction</span>
+        </article>
+        <article class="tool-card">
+          <h3><i class="fas fa-pray" aria-hidden="true"></i>Prayer Times</h3>
+          <p>Get precise prayer times for your location with notifications for each salah time.</p>
+          <a href="/lifestyle" class="btn ghost" aria-describedby="prayer-desc">Check Times</a>
+          <span class="sr-only" id="prayer-desc">View prayer times for your location</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="community" aria-labelledby="community-title">
+      <h2 id="community-title" class="section-title">Join Our Growing Community</h2>
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-number" aria-label="50,000 plus">50,000+</div>
+          <div class="stat-label">Active Users</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" aria-label="100 plus">100+</div>
+          <div class="stat-label">Countries</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" aria-label="4.8 out of 5">4.8/5</div>
+          <div class="stat-label">User Rating</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Deenify - Home">
+            <i class="fas fa-mosque" aria-hidden="true"></i>
+            <span>Deenify</span>
+          </a>
+          <p class="footer-description">Your comprehensive digital companion for Islamic faith, featuring Quran study, prayer tools, and spiritual growth resources.</p>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+        
+        <div class="footer-social">
+          <h3 class="sr-only">Follow us on social media</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Follow us on Facebook" rel="noopener">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Follow us on Twitter" rel="noopener">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Follow us on Instagram" rel="noopener">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Subscribe to our YouTube channel" rel="noopener">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="small">&copy; 2025 Deenify. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Screen Reader Only Content -->
+  <div class="sr-only" aria-hidden="true">
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </div>
+
+  <script>
+    (function() {
+      'use strict';
+      
+      // Mobile navigation functionality
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+      const body = document.body;
+      let mobileNav = null;
+      
+      // Create mobile navigation overlay
+      function createMobileNav() {
+        if (mobileNav) return;
+        
+        mobileNav = document.createElement('div');
+        mobileNav.className = 'mobile-nav-overlay';
+        mobileNav.setAttribute('role', 'dialog');
+        mobileNav.setAttribute('aria-modal', 'true');
+        mobileNav.setAttribute('aria-label', 'Mobile navigation');
+        
+        mobileNav.innerHTML = `
+          <div class="mobile-nav">
+            <button class="close-mobile-nav" aria-label="Close mobile navigation">
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <nav class="main-nav" role="navigation" aria-label="Mobile navigation">
+              <a href="index.html" class="active" aria-current="page">Home</a>
+              <a href="about.html">About Islam</a>
+              <a href="quran.html">Quran & Hadith</a>
+              <a href="lifestyle.html">Lifestyle</a>
+              <a href="apps.html">Our Apps</a>
+              <a href="developer.html">Developer</a>
+              <a href="contact.html">Contact</a>
+            </nav>
+          </div>
+        `;
+        
+        body.appendChild(mobileNav);
+        
+        // Add event listeners
+        const closeBtn = mobileNav.querySelector('.close-mobile-nav');
+        closeBtn.addEventListener('click', closeMobileNav);
+        
+        // Close on escape key
+        document.addEventListener('keydown', handleEscapeKey);
+        
+        // Close when clicking outside
+        mobileNav.addEventListener('click', function(e) {
+          if (e.target === mobileNav) {
+            closeMobileNav();
+          }
+        });
+        
+        // Close mobile nav when clicking on links
+        const mobileNavLinks = mobileNav.querySelectorAll('.main-nav a');
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', closeMobileNav);
+        });
+      }
+      
+      function openMobileNav() {
+        createMobileNav();
+        mobileNav.classList.add('active');
+        body.style.overflow = 'hidden';
+        mobileNavToggle.setAttribute('aria-expanded', 'true');
+        
+        // Focus management
+        const closeBtn = mobileNav.querySelector('.close-mobile-nav');
+        closeBtn.focus();
+      }
+      
+      function closeMobileNav() {
+        if (!mobileNav) return;
+        
+        mobileNav.classList.remove('active');
+        body.style.overflow = '';
+        mobileNavToggle.setAttribute('aria-expanded', 'false');
+        mobileNavToggle.focus();
+      }
+      
+      function handleEscapeKey(e) {
+        if (e.key === 'Escape' && mobileNav && mobileNav.classList.contains('active')) {
+          closeMobileNav();
+        }
+      }
+      
+      // Event listeners
+      mobileNavToggle.addEventListener('click', openMobileNav);
+      
+      // Intersection Observer for animations
+      const animatedElements = document.querySelectorAll('.animate');
+      
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+        
+        animatedElements.forEach(el => {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback for browsers without IntersectionObserver
+        animatedElements.forEach(el => {
+          el.style.opacity = '1';
+        });
+      }
+      
+      // Smooth scrolling for anchor links
+      document.addEventListener('click', function(e) {
+        if (e.target.matches('a[href^="#"]')) {
+          e.preventDefault();
+          const target = document.querySelector(e.target.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+      
+      // Enhanced keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        // Handle tab trapping in mobile nav
+        if (mobileNav && mobileNav.classList.contains('active')) {
+          const focusableElements = mobileNav.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
+          const firstFocusable = focusableElements[0];
+          const lastFocusable = focusableElements[focusableElements.length - 1];
+          
+          if (e.key === 'Tab') {
+            if (e.shiftKey) {
+              if (document.activeElement === firstFocusable) {
+                lastFocusable.focus();
+                e.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastFocusable) {
+                firstFocusable.focus();
+                e.preventDefault();
+              }
+            }
+          }
+        }
+      });
+      
+      // Performance optimization: Lazy load non-critical resources
+      window.addEventListener('load', function() {
+        // Add loaded class for any additional styling
+        body.classList.add('loaded');
+        
+        // Preload critical pages
+        const criticalPages = ['/apps', '/quran', '/lifestyle'];
+        criticalPages.forEach(page => {
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.href = page;
+          document.head.appendChild(link);
+        });
+      });
+      
+      // Error handling for images
+      document.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG') {
+          e.target.style.display = 'none';
+          console.warn('Image failed to load:', e.target.src);
+        }
+      }, true);
+      
+      // Analytics and user interaction tracking (placeholder)
+      function trackInteraction(action, element) {
+        // Implement analytics tracking here
+        console.log('User interaction:', action, element);
+      }
+      
+      // Track button clicks
+      document.addEventListener('click', function(e) {
+        if (e.target.matches('.btn, .card, .tool-card, .app')) {
+          const elementType = e.target.classList.contains('btn') ? 'button' : 
+                            e.target.classList.contains('card') ? 'feature-card' :
+                            e.target.classList.contains('tool-card') ? 'tool-card' : 'app-card';
+          trackInteraction('click', elementType);
+        }
+      });
+      
+    })();
+  </script>
+</body>
+</html>
