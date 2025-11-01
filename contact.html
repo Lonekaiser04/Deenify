@@ -15,6 +15,8 @@
       --primary-light: #e8f5f0;
       --secondary-color: #2c5530;
       --accent-color: #d4af37;
+      --accent-light: #fef9e7;
+      --accent-dark: #b8941f;
       --text-dark: #1a1a1a;
       --text-light: #4a4a4a;
       --bg-light: #f8f9f9;
@@ -23,6 +25,9 @@
       --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
       --border-radius: 8px;
       --transition: all 0.3s ease;
+      --muted: #6c757d;
+      --border-color: #e9ecef;
+      --card: #ffffff;
     }
 
     * {
@@ -211,6 +216,10 @@
       margin-bottom: 3rem;
     }
 
+    .text-center {
+      text-align: center;
+    }
+
     /* Form Styles */
     .contact-form {
       background: var(--bg-light);
@@ -343,6 +352,10 @@
     }
 
     /* FAQ Styles */
+    .faq-list {
+      margin-top: 1.5rem;
+    }
+
     .faq-item {
       margin-bottom: 1.5rem;
       border-bottom: 1px solid #eee;
@@ -379,20 +392,20 @@
     .faq-item.active .faq-question i {
       transform: rotate(180deg);
     }
+
     /* Community Section */
     .community {
-      padding: 80px 0;
+      padding: 3rem 0;
       background: var(--accent-light);
       border-radius: 16px;
-      margin: 40px 0;
+      margin: 3rem 0;
       text-align: center;
-      background-color: rgb(174, 244, 128);
     }
 
     .community h2 {
       font-size: clamp(1.8rem, 3vw, 2.2rem);
-      color: var(--accent);
-      margin-bottom: 20px;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
       font-weight: 700;
     }
 
@@ -400,15 +413,15 @@
       color: var(--muted);
       font-size: 1.1rem;
       max-width: 600px;
-      margin: 0 auto 30px;
+      margin: 0 auto 1.5rem;
     }
 
     .community-link {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 12px 24px;
-      background: var(--accent);
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent-color);
       color: white;
       text-decoration: none;
       border-radius: 8px;
@@ -421,10 +434,10 @@
       transform: translateY(-2px);
     }
 
- /* Footer */
+    /* Footer */
     .site-footer {
-      padding: 60px 0 40px;
-      margin-top: 80px;
+      padding: 3rem 0 2rem;
+      margin-top: 3rem;
       border-top: 1px solid var(--border-color);
       background: var(--accent-light);
     }
@@ -434,7 +447,7 @@
       justify-content: space-between;
       align-items: flex-start;
       flex-wrap: wrap;
-      gap: 40px;
+      gap: 2rem;
     }
 
     .footer-brand {
@@ -444,20 +457,20 @@
 
     .footer-brand .brand {
       font-size: 1.4rem;
-      margin-bottom: 16px;
+      margin-bottom: 1rem;
       display: inline-flex;
     }
 
     .footer-description {
       color: var(--muted);
       line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
     }
 
     .footer-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 1rem;
     }
 
     .footer-links a {
@@ -465,12 +478,12 @@
       text-decoration: none;
       transition: var(--transition);
       font-weight: 500;
-      padding: 4px 0;
+      padding: 0.25rem 0;
     }
 
     .footer-links a:hover,
     .footer-links a:focus {
-      color: var(--accent);
+      color: var(--accent-color);
       outline: none;
     }
 
@@ -480,18 +493,18 @@
 
     .social-links {
       display: flex;
-      gap: 12px;
+      gap: 0.75rem;
     }
 
     .social-links a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 44px;
-      height: 44px;
+      width: 2.75rem;
+      height: 2.75rem;
       border-radius: 50%;
       background: var(--card);
-      color: var(--accent);
+      color: var(--accent-color);
       transition: var(--transition);
       text-decoration: none;
       box-shadow: var(--shadow);
@@ -499,7 +512,7 @@
 
     .social-links a:hover,
     .social-links a:focus {
-      background: var(--accent);
+      background: var(--accent-color);
       color: white;
       transform: translateY(-2px);
       box-shadow: var(--shadow-hover);
@@ -507,8 +520,8 @@
     }
 
     .footer-bottom {
-      margin-top: 40px;
-      padding-top: 20px;
+      margin-top: 2rem;
+      padding-top: 1rem;
       border-top: 1px solid var(--border-color);
       text-align: center;
     }
@@ -516,6 +529,19 @@
     .small {
       font-size: 0.9rem;
       color: var(--muted);
+    }
+
+    /* Accessibility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     /* Mobile Navigation */
@@ -808,7 +834,8 @@
         </div>
       </div>
     </section>
-      <section class="community" aria-labelledby="community-title">
+    
+    <section class="community" aria-labelledby="community-title">
       <h2 id="community-title">Visit My Personal Website</h2>
       <p>Explore more about my work, projects, and writings on my personal website where everything is documented.</p>
       <a href="https://Kaisermohiuddin.me" class="community-link" target="_blank" rel="noopener">
@@ -816,7 +843,6 @@
       </a>
     </section>
   </main>
-
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
@@ -867,31 +893,35 @@
       const mobileNav = document.querySelector('.mobile-nav');
       const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
       
-      mobileNavToggle.addEventListener('click', function() {
-        mobileNav.classList.add('open');
-        mobileNavOverlay.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-      });
-      
-      closeMobileNav.addEventListener('click', function() {
-        mobileNav.classList.remove('open');
-        mobileNavOverlay.style.display = 'none';
-        document.body.style.overflow = '';
-      });
-      
-      mobileNavOverlay.addEventListener('click', function() {
-        mobileNav.classList.remove('open');
-        mobileNavOverlay.style.display = 'none';
-        document.body.style.overflow = '';
-      });
+      if (mobileNavToggle && closeMobileNav && mobileNav && mobileNavOverlay) {
+        mobileNavToggle.addEventListener('click', function() {
+          mobileNav.classList.add('open');
+          mobileNavOverlay.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+        });
+        
+        closeMobileNav.addEventListener('click', function() {
+          mobileNav.classList.remove('open');
+          mobileNavOverlay.style.display = 'none';
+          document.body.style.overflow = '';
+        });
+        
+        mobileNavOverlay.addEventListener('click', function() {
+          mobileNav.classList.remove('open');
+          mobileNavOverlay.style.display = 'none';
+          document.body.style.overflow = '';
+        });
+      }
 
       // FAQ Accordion
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-          item.classList.toggle('active');
-        });
+        if (question) {
+          question.addEventListener('click', () => {
+            item.classList.toggle('active');
+          });
+        }
       });
 
       // Contact Form Submission
@@ -899,35 +929,39 @@
       const formMessage = document.getElementById('form-message');
       const submitBtn = document.getElementById('submit-btn');
       
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Basic validation
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-        
-        if (!name || !email || !message) {
-          showMessage('Please fill in all required fields.', 'error');
-          return;
-        }
-        
-        if (!isValidEmail(email)) {
-          showMessage('Please enter a valid email address.', 'error');
-          return;
-        }
-        
-        // Disable submit button and show loading state
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        
-        // Send data to Google Sheets
-        sendToGoogleSheets();
-      });
+      if (contactForm && formMessage && submitBtn) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Basic validation
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const message = document.getElementById('message').value.trim();
+          
+          if (!name || !email || !message) {
+            showMessage('Please fill in all required fields.', 'error');
+            return;
+          }
+          
+          if (!isValidEmail(email)) {
+            showMessage('Please enter a valid email address.', 'error');
+            return;
+          }
+          
+          // Disable submit button and show loading state
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+          
+          // Send data to Google Sheets
+          sendToGoogleSheets();
+        });
+      }
       
       function showMessage(text, type) {
-        formMessage.textContent = text;
-        formMessage.className = 'form-message ' + type;
+        if (formMessage) {
+          formMessage.textContent = text;
+          formMessage.className = 'form-message ' + type;
+        }
       }
       
       function isValidEmail(email) {
@@ -959,12 +993,13 @@
         })
         .finally(() => {
           // Re-enable submit button
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+          }
         });
       }
     });
   </script>
 </body>
 </html>
-
