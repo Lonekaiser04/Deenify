@@ -1103,7 +1103,8 @@
         
         <article class="app animate delay-1">
           <div class="app-logo">
-            <img src="quran.png"
+         <img src="quran.png" alt="Islam99 App Logo - Quran Study">
+</div>
           <h3><i class="fas fa-quran" aria-hidden="true"></i>Islam99</h3>
           <p>Deepen your connection with the Quran through our comprehensive study app featuring translations, transliterations, audio recitations, and personalized reading plans.</p>
           <a class="btn" href="#islam99-details" aria-describedby="islam99-desc">
@@ -1153,7 +1154,7 @@
             <li>Dark mode support for comfortable night usage</li>
           </ul>
           <div class="hero-cta">
-            <a href="https://play.google.com/store/apps/details?id=com.islamic.streakly" data-app="SiratSync" aria-label="Download SiratSync from Play Store">
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.islamic.streakly" data-app="SiratSync" aria-label="Download SiratSync from Play Store">
               <i class="fab fa-google-play" aria-hidden="true"></i> 
               <span>Play Store</span>
             </a>
@@ -1172,8 +1173,7 @@
 
     <section id="islam99-details" class="simple-app animate delay-3">
       <div class="app-logo">
-        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cdefs%3E%3ClinearGradient id='goldGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffd700;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23b8860b;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23goldGrad)' width='120' height='120' rx='24'/%3E%3Ctext fill='%23ffffff' font-family='serif' font-size='35' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E☪%3C/text%3E%3C/svg%3E" 
-             alt="Islam99 App Logo - Comprehensive Islamic Knowledge">
+        <img src="quran.png"
       </div>
       <h2>
         <i class="fas fa-quran" aria-hidden="true"></i> 
@@ -1382,41 +1382,44 @@
         });
       }
 
-      // App download tracking with enhanced feedback
-      const downloadButtons = document.querySelectorAll('[data-app]');
-      downloadButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-          e.preventDefault();
-          const appName = this.getAttribute('data-app');
-          const downloadType = this.textContent.includes('Play Store') ? 'playstore' : 'apk';
-          
-          // Handle APK download redirect
-          if (downloadType === 'apk' && appName === 'SiratSync') {
-            window.location.href = 'https://kaisermohiuddin.me/SiratSync/';
-            return;
-          }
-          
-          // Show loading state
-          const originalContent = this.innerHTML;
-          this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
-          this.style.pointerEvents = 'none';
-          
-          // Simulate download process
-          setTimeout(() => {
-            console.log(`Download initiated: ${appName} via ${downloadType}`);
-            
-            // Show success message
-            this.innerHTML = '<i class="fas fa-check"></i> Coming Soon!';
-            
-            // Reset button after 3 seconds
-            setTimeout(() => {
-              this.innerHTML = originalContent;
-              this.style.pointerEvents = 'auto';
-            }, 3000);
-          }, 1500);
-        });
-      });
-
+// App download tracking with enhanced feedback
+const downloadButtons = document.querySelectorAll('[data-app]');
+downloadButtons.forEach(button => {
+  button.addEventListener('click', function(e) {
+    const appName = this.getAttribute('data-app');
+    const downloadType = this.textContent.includes('Play Store') ? 'playstore' : 'apk';
+    const href = this.getAttribute('href');
+    
+    // If it's a valid URL (not #), allow it to navigate
+    if (href && href !== '#' && !href.startsWith('#')) {
+      // Let the link work normally - don't prevent default
+      console.log(`Navigating to: ${href}`);
+      return;
+    }
+    
+    // Only prevent default for placeholder links
+    e.preventDefault();
+    
+    // Show loading state
+    const originalContent = this.innerHTML;
+    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+    this.style.pointerEvents = 'none';
+    
+    // Simulate download process
+    setTimeout(() => {
+      console.log(`Download initiated: ${appName} via ${downloadType}`);
+      
+      // Show success message
+      this.innerHTML = '<i class="fas fa-check"></i> Coming Soon!';
+      
+      // Reset button after 3 seconds
+      setTimeout(() => {
+        this.innerHTML = originalContent;
+        this.style.pointerEvents = 'auto';
+      }, 3000);
+    }, 1500);
+  });
+});
       // Smooth scrolling for anchor links
       document.addEventListener('click', function(e) {
         if (e.target.matches('a[href^="#"]')) {
@@ -1552,6 +1555,7 @@
   </script>
 </body>
 </html>
+
 
 
 
